@@ -2,6 +2,8 @@
 
 Landing page for **Screen Pen**: draw, highlight, capture and record over your Windows desktop.
 
+![Screen Pen marking up a lesson slide](screen-pen-in-action.png)
+
 - Site: https://pitchiluxe.github.io/screen-pen/
 - Download: [Screen-Pen-Setup.exe](https://github.com/pitchiluxe/screen-pen/releases/latest/download/Screen-Pen-Setup.exe) (Windows 10/11, 64-bit)
 

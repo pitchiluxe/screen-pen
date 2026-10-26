@@ -9,7 +9,7 @@
 <link rel="apple-touch-icon" href="icon-256.png">
 <meta property="og:title" content="Screen Pen for Windows">
 <meta property="og:description" content="Draw on your real Windows desktop, then capture or record it.">
-<meta property="og:image" content="icon-256.png">
+<meta property="og:image" content="https://pitchiluxe.github.io/screen-pen/screen-pen-in-action.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Caveat+Brush&display=swap" rel="stylesheet">
@@ -122,6 +122,17 @@ h1 .underline{display:block; height:10px; width:0; margin-top:8px; background:va
 h2{font-family:var(--hand); font-weight:400; font-size:clamp(2.25rem,5vw,3.25rem); line-height:1.05; margin:0 0 8px}
 .sub{margin:0 0 28px; color:var(--ink-soft); max-width:60ch}
 
+/* ---------- pull-down projector screen ---------- */
+.projector{margin:0; position:relative; padding-top:18px}
+.roller{position:absolute; top:0; left:-12px; right:-12px; height:24px; border-radius:12px;
+  background:linear-gradient(#e9edf0,#9aa4ac 60%,#6f7a83); box-shadow:0 4px 8px rgba(0,0,0,.3); z-index:1}
+.screen{background:#f7f8f6; padding:14px 14px 34px; border-radius:0 0 4px 4px; box-shadow:0 18px 30px -12px rgba(30,40,35,.55);
+  border-bottom:10px solid #5c666e}
+.screen img{display:block; width:100%; height:auto; border:1px solid #d5dad8}
+.cord{width:3px; height:46px; margin:0 auto; background:#5c666e; position:relative}
+.cord::after{content:""; position:absolute; bottom:-12px; left:-7px; width:17px; height:17px; border-radius:50%; background:#5c666e}
+.projector figcaption{text-align:center; margin-top:18px; color:var(--ink-soft); font-size:.95rem}
+
 /* ---------- whiteboard features ---------- */
 .whiteboard{
   background:linear-gradient(160deg,#ffffff,#eef2f4); border:14px solid #b8c0c6; border-radius:8px; padding:40px 44px 32px;
@@ -205,7 +216,7 @@ footer{padding:24px 0 40px; color:var(--ink-soft); font-size:.95rem; display:fle
 <div class="wrap">
   <header class="top">
     <a class="brand" href="#top"><img src="icon.svg" alt="" width="40" height="40">Screen Pen</a>
-    <nav aria-label="Sections"><a href="#features">Features</a><a href="#shortcuts">Shortcuts</a><a href="#install">Install</a></nav>
+    <nav aria-label="Sections"><a href="#see-it">See it</a><a href="#features">Features</a><a href="#shortcuts">Shortcuts</a><a href="#install">Install</a></nav>
     <div class="clock" id="clock" role="img" aria-label="Classroom clock"></div>
   </header>
 
@@ -240,6 +251,23 @@ footer{padding:24px 0 40px; color:var(--ink-soft); font-size:.95rem; display:fle
           <button class="duster" id="wipe" type="button">Wipe board</button>
         </div>
       </div>
+    </section>
+
+    <section class="section" id="see-it" aria-labelledby="p-title">
+      <h2 id="p-title">See it on a real screen</h2>
+      <p class="sub">A sample lesson slide marked up with Screen Pen's highlighter, box, arrow and pen. The toolbar sits on the left edge; the green border means drawing mode is on.</p>
+      <figure class="projector">
+        <div class="roller" aria-hidden="true"></div>
+        <div class="screen">
+          <picture>
+            <source srcset="screen-pen-in-action.webp" type="image/webp">
+            <img src="screen-pen-in-action.png" width="1600" height="870" loading="lazy"
+                 alt="Screen Pen running over a water cycle slide: the vertical toolbar on the left, Evaporation highlighted in yellow, Condensation boxed in blue, a red arrow from Precipitation to the rain, and the sun circled in teal.">
+          </picture>
+        </div>
+        <div class="cord" aria-hidden="true"></div>
+        <figcaption>Captured from the Screen Pen app on Windows 11.</figcaption>
+      </figure>
     </section>
 
     <section class="section" id="features" aria-labelledby="f-title">
